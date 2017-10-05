@@ -12,5 +12,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(VehiclesSeeder::class);
         $this->call(PilgrimsSeeder::class);
+        $this->call(GitesSeeder::class);
     }
 }
