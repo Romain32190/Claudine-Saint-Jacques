@@ -8,6 +8,6 @@ class AddressController extends Controller
 {
     public function index(){
 
-      $address = Address::all()->get();
+      $address = addresses::all()->get();
     }
 }

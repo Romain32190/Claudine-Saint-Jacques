@@ -17,7 +17,7 @@ class CreateAddressesTable extends Migration
             $table->increments('id')->index();
             $table->string('number')->nullable();
             $table->string('street');
-            $table->string('zipcode', 5);
+            $table->string('zipcode', 6);
             $table->text('city');
             $table->integer('flatNumber')->nullable();
             $table->integer('floor')->nullable();

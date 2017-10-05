@@ -26,11 +26,10 @@ class VehiclesSeeder extends Seeder
                 'minWeight' => 1500,
                 'maxWeight' => 2500,
                 'insuranceNumber' => 7547598,
-                'technical control' => $faker->dateTime($max = 'now', $timezone = date_default_timezone_get())
+                'technicalControl' => $faker->dateTime($max = 'now', $timezone = date_default_timezone_get())
 
             ]);
 
-    	}     
+    	}
     }
 }
-
