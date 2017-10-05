@@ -19,7 +19,7 @@ class PilgrimsSeeder extends Seeder
             pilgrim::create([ //,
                 'name' => $faker->userName,
                 'firstname' => $faker->userName,
-                'id_address' => $faker->numberBetween($min = 10, $max = 50)
+                'id_address' => $i+1,
             ]);
 
     	}     
