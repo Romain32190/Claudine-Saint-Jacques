@@ -12,6 +12,7 @@ class RoadmapsController extends Controller
 
     public function store(){
       Post::create(request()->all());
+
       return redirect('/create/roadmap');
     }
 }
