@@ -24,8 +24,8 @@ class CreateAddressesTable extends Migration
             $table->string('flatName')->nullable();
             $table->decimal('latitude', 13, 11)->nullable();
             $table->decimal('longitude', 13, 11)->nullable();
-            $table->string('phone', 10);
-            $table->string('mobile', 10);
+            $table->string('phone', 10)->nullable();
+            $table->string('mobile', 10)->nullable();
             $table->timestamps();
         });
     }

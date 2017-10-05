@@ -20,7 +20,7 @@ class CreateDriversTable extends Migration
             $table->integer("drivingLicence");
             $table->integer("id_address");
             $table->integer("id_vehicule");
-            $table->boolean("active");
+            $table->boolean("active")->default(true);
             $table->timestamps();
         });
     }
