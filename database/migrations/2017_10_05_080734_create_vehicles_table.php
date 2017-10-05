@@ -23,7 +23,7 @@ class CreateVehiclesTable extends Migration
             $table->integer("minWeight");
             $table->integer("maxWeight");
             $table->integer("insuranceNumber");
-            $table->date("technical control");
+            $table->date("technicalControl");
             $table->timestamps();
         });
     }

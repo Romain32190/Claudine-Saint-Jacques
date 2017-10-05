@@ -17,8 +17,8 @@ class CreateInvoicesTable extends Migration
             $table->increments('id')->index();
             $table->integer("id_pilgrim");
             $table->integer("luggages");
-            $table->integer("luggages_travels");
-            $table->integer("pilgrim_travels");
+            $table->integer("luggagesTravels");
+            $table->integer("pilgrimTravels");
             $table->timestamps();
         });
     }

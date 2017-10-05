@@ -18,7 +18,6 @@ class CreatePilgrimsTable extends Migration
             $table->text('name');
             $table->text('firstname');
             $table->integer('id_address');
-            $table->integer('id_luggages');
             $table->timestamps();
         });
     }
