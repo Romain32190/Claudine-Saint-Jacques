@@ -33,6 +33,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Transports Claudine
                 </a>
+               <ul class="nav navbar-nav">
+                 <li><a href="/carte" style="font-size: 18px;">Carte</a></li>
+              </ul>
             </div>
 
         </div>
