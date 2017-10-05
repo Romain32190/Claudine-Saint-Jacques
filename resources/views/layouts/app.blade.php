@@ -25,16 +25,19 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="background-color: white;">
         <div class="container">
             <div class="navbar-header">
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: black;">
                     Transports Claudine
                 </a>
                <ul class="nav navbar-nav">
-                 <li><a href="/carte" style="font-size: 16px;">Carte</a></li>
+                 <li><a href="/carte" style="font-size: 16px; color: black;">Carte</a></li>
+                 <li><a href="#"></a></li>
+                 <li><a href="#"></a></li>
+                 <li><a href="#"></a></li>
               </ul>
             </div>
 
