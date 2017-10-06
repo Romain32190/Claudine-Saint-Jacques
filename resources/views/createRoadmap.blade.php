@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="col-sm-2" style="overflow-y:scroll; height:100%;">
+  <div class="col-sm-2" style="overflow-y:scroll; scrollbar force-overflow; height:100%;">
 
     @foreach ($luggages as $luggage)
       <div class="panel panel-default">
@@ -13,13 +13,13 @@
 
 
           <p>poids : {{$luggage->weight}}</p>
-          <p>de : <select style="width: 90%;" class="" name="">
+          <p>de : <select style="width: 100%; height:100%;" class="form-control form-control-sm" name="">
             @foreach ($steps as $step)
               <option value= {{$step->name}} > {{$step->name}} </option>
             @endforeach
 
           </select></p>
-          <p>a :<select style="width: 90%;" class="" name="">
+          <p>a :<select style="width: 100%; height: 100%" class="form-control form-control-sm" name="">
             @foreach ($steps as $step)
               <option value= {{$step->name}} > {{$step->name}} </option>
             @endforeach
