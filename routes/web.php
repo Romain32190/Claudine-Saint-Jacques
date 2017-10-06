@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/carte', function(){
 	return view('carte');
 });
+
+Route::resource('steps', 'StepController');
