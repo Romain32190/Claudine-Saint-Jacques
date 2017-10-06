@@ -20,3 +20,7 @@ Route::get('/carte', function(){
 });
 
 Route::resource('steps', 'StepController');
+
+Route::post('luggages', 'LuggagesController');
+
+Route::post('pilgrims', 'PilgrimController');
