@@ -27,8 +27,6 @@ class addressTableSeeder extends Seeder
               'flatNumber' => $faker->buildingNumber,
               'floor' => $faker->randomNumber,
               'flatName' => $faker->name,
-              'latitude' => $faker->latitude($min = -60, $max = 60),
-              'longitude' => $faker->longitude($min = -100, $max = 100),
               'phone' => $faker->isbn10,
               'mobile' =>$faker->isbn10
           ]);
