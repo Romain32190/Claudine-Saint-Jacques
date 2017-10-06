@@ -14,7 +14,9 @@ class StepController extends Controller
      */
     public function index()
     {
+
         return response()->json(Step::all());
+
     }
 
     /**
@@ -24,7 +26,7 @@ class StepController extends Controller
      */
     public function create()
     {
-        //
+      
     }
 
     /**
