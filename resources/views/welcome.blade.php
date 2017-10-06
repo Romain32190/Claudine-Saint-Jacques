@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-        <div class="col-sm-3">
+        <div class="col-sm-3" style="overflow-y: scroll; height:100%;">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Bagages
@@ -33,13 +33,19 @@
                     </div>
                 </div>
         </div>
-         <div class="col-sm-3">
+         <div class="col-sm-3" style="overflow-y: scroll; height:100%;">
+        
+
+
+
+         @foreach ($pilgrims as $pilgrim)
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Pélerins
                 </div>
 
                 <div class="panel-body">
+                <p>{{$pilgrim->name}}</p>
                     <form action="" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
@@ -56,6 +62,7 @@
                     </form>
                 </div>
             </div>
+            @endforeach
                 <div class="panel panel-default">
                     <div class="panel-heading">
                     </div>
@@ -64,7 +71,7 @@
                     </div>
                 </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3" style="overflow-y: scroll; height:100%;">
 
           @foreach ($drivers as $driver)
             <div class="panel panel-default">
@@ -88,7 +95,7 @@
 
               
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3" style="overflow-y: scroll; height:100%;">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Maps

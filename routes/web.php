@@ -24,7 +24,7 @@ Route::get('/carte', function(){
 
 Route::resource('steps', 'StepController');
 
-Route::post('luggages', 'LuggagesController');
+Route::get('luggages', 'LuggagesController@index');
 
-Route::post('pilgrims', 'PilgrimController');
+Route::get('pilgrims', 'PilgrimController@index');
 

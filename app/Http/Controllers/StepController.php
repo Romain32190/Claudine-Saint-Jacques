@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\step;
-use Illuminate\Http\Request;
 use App\Step;
+use Illuminate\Http\Request;
 
 class StepController extends Controller
 {
