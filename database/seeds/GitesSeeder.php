@@ -25,6 +25,7 @@ class GitesSeeder extends Seeder
 
             ]);
 
+        
     	}
     }
 }
