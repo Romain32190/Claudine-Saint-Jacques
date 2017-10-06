@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\step;
 use Illuminate\Http\Request;
 
 class StepController extends Controller
@@ -13,7 +14,7 @@ class StepController extends Controller
      */
     public function index()
     {
-        //
+        $steps = step::all();
     }
 
     /**

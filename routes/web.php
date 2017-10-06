@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', 'DriversController@index');
+
 Route::get('/carte', function(){
 	return view('carte');
 });

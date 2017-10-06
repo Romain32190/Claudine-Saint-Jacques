@@ -19,7 +19,7 @@
         body {
             font-family: 'Lato';
         }
-        .fa-btn {   
+        .fa-btn {
             margin-right: 6px;
         }
     </style>

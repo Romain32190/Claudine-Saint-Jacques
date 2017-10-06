@@ -65,35 +65,28 @@
                 </div>
         </div>
         <div class="col-sm-3">
+
+          @foreach ($drivers as $driver)
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    Voituriers
-                </div>
+              <div class="panel-heading">
+                Voituriers
+              </div>
 
-                <div class="panel-body">
-                    <form action="" method="POST" class="form-horizontal">
-                        {{ csrf_field() }}
-
-                        <div class="form-group">
-                            <div class="col-sm-3">
-                            </div>
-                        </div>
+              <div class="panel-body">
 
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-6">
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <p>name : {{$driver->name}}</p>
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-6">
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                    </div>
+          @endforeach
 
-                    <div class="panel-body">
-                    </div>
-                </div>
+              
         </div>
         <div class="col-sm-3">
             <div class="panel panel-default">
@@ -126,5 +119,5 @@
                     </div>
                 </div>
         </div>
-               
+
 @endsection

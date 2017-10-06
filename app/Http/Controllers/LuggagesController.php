@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\luggages;
 use Illuminate\Http\Request;
 
 class LuggagesController extends Controller
 {
     public function index(){
-      $luggagges = Luggages::all()->get();
+      $luggagges = luggages::all()->get();
     }
     public function store(Request $request){
       $this -> validate(request(), [

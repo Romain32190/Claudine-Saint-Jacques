@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\address;
 use Illuminate\Http\Request;
 
 class AddressController extends Controller
 {
     public function index(){
 
-      $address = addresses::all()->get();
+      $address = addresses::all();
 
       return view('address.index', compact('address'));
     }

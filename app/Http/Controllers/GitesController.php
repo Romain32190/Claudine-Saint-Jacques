@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\gites;
 use Illuminate\Http\Request;
 
 class GitesController extends Controller
 {
   public function index(){
-    $gites = Gites::all()->get();
+    $gites = gites::all();
 
     return view('gites.view', compact('gites'));
   }

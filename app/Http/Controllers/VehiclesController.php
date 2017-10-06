@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\vehicles;
 use Illuminate\Http\Request;
 
 class VehiclesController extends Controller
 {
     public function index(){
-      $vehicles = Vehicles::all()->get();
+      $vehicles = vehicles::all();
     }
 
     public function store(Request $request){
