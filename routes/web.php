@@ -12,17 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('createRoadmap');
+    return view('welcome');
 });
 
 
-  Route::get('/', 'RoadmapsController@index');
-
-  
-
-
-
-
+  Route::get('/createroadmap', 'RoadmapsController@index');
 
 
 

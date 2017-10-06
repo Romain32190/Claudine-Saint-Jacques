@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\drivers;
+use App\pilgrim;
 use Illuminate\Http\Request;
 
 class DriversController extends Controller
@@ -11,7 +12,8 @@ class DriversController extends Controller
 
     $drivers = drivers::all();
 
-    return view('/createRoadmap', compact('drivers'));
+
+    return view('/drivers', compact('drivers'));
   }
 
     public function create (){

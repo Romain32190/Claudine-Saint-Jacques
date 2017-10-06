@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Step;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7db5defb2bbfc0d54bab4a44a8fa10a0e7a2a01b
 
 class StepController extends Controller
 {
