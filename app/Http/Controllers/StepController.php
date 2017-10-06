@@ -15,13 +15,10 @@ class StepController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $steps = step::all();
-=======
 
         return response()->json(Step::all());
 
->>>>>>> 1ee052eee07f54276601fc1652b0926f2c2385ea
+
     }
 
     /**
@@ -31,7 +28,7 @@ class StepController extends Controller
      */
     public function create()
     {
-      
+
     }
 
     /**
