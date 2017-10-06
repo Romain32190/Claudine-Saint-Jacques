@@ -20,3 +20,11 @@ Route::get('/', 'DriversController@index');
 Route::get('/carte', function(){
 	return view('carte');
 });
+
+
+Route::resource('steps', 'StepController');
+
+Route::post('luggages', 'LuggagesController');
+
+Route::post('pilgrims', 'PilgrimController');
+
