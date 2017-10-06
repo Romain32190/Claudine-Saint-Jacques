@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 class LuggagesController extends Controller
 {
     public function index(){
-      $luggagges = luggages::all()->get();
+      $luggages = luggages::all();
+
+      return view
+      ('/createRoadmap', compact('luggages'));
     }
+
     public function store(Request $request){
       $this -> validate(request(), [
           'numnber' => required(),

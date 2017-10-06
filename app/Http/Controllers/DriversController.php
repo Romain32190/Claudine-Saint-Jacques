@@ -11,7 +11,7 @@ class DriversController extends Controller
 
     $drivers = drivers::all();
 
-    return view('/welcome', compact('drivers'));
+    return view('/createRoadmap', compact('drivers'));
   }
 
     public function create (){

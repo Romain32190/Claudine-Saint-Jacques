@@ -64,34 +64,11 @@
                     </div>
                 </div>
         </div>
-        <div class="col-sm-3">
 
-          @foreach ($drivers as $driver)
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                Voituriers
-              </div>
-
-              <div class="panel-body">
-
-
-                <p>name : {{$driver->name}}</p>
-
-                  <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-6">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          @endforeach
-
-              
-        </div>
         <div class="col-sm-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Maps
+                    Roadmaps
                 </div>
 
                 <div class="panel-body">
