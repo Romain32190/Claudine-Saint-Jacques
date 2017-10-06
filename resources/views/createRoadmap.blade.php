@@ -5,8 +5,8 @@
 
     @foreach ($luggages as $luggage)
       <div class="panel panel-default">
-        <div class="panel-heading">
-          Baggages
+        <div class="panel-heading" style="background-color: #0000FF; color:white;">
+          Bagages
         </div>
 
         <div class="panel-body">
@@ -39,7 +39,7 @@
 
   @foreach ($pilgrims as $pilgrim)
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" style="background-color: #0000FF; color:white;">
         {{$pilgrim->name}}
       </div>
 
@@ -62,7 +62,7 @@
 
       @foreach ($drivers as $driver)
         <div class="panel panel-default">
-          <div class="panel-heading">
+          <div class="panel-heading" style="background-color: #0000FF; color:white;">
             {{$driver->name}}
           </div>
 
