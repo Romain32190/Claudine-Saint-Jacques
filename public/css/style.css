@@ -22,3 +22,13 @@ body {
     border-radius: 10px;
     background: gray; 
 }
+
+
+		.drag-enter {
+            border: 2px dashed #000;
+        }
+
+        [data-drop-target] {
+            margin: 25px;
+			background-color: gainsboro;
+		}
