@@ -20,9 +20,10 @@ class LuggagesSeeder extends Seeder
         for ($i = 0; $i < $limit; $i++) {
             luggages::create([
                 'id_pilgrims' => $faker->numberBetween(1,16),
-                'number' => $faker->randomDigit,
+                'startDate' => $faker->dateTime($max = 'now', $timezone = date_default_timezone_get()),
+                'start'=> $faker->city,
+                'goal' => $faker->city,
                 'weight' => $faker->randomDigit,
-
 
             ]);
 

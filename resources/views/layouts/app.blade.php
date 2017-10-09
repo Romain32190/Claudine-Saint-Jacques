@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   @include('layouts.head')
 
     <body id="app-layout">
@@ -7,6 +7,7 @@
 
       <div class="container" style="height: 100vh;">
         @yield('content')
+        @yield('luggage')
       </div>
 
 

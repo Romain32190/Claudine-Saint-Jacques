@@ -16,17 +16,21 @@ Route::get('/', function () {
 });
 
 
-  Route::get('/createroadmap', 'RoadmapsController@index');
+Route::get('/createroadmap', 'RoadmapsController@index');
 
+
+//luggages
+Route::get('/createLuggage', 'LuggagesController@create');
+
+Route::post('/storeLuggage', 'LuggagesController@store');
 
 
 Route::get('/carte', function(){
 	return view('carte');
 });
 
-
 Route::resource('steps', 'StepController');
 
-//Route::post('luggages', 'LuggagesController@index');
+
 
 Route::post('pilgrims', 'PilgrimController@index');

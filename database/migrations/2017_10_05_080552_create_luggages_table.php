@@ -16,8 +16,10 @@ class CreateLuggagesTable extends Migration
         Schema::create('luggages', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->integer('id_pilgrims');
-            $table->integer("number");
-            $table->decimal("weight" ,4 ,2);
+            $table->date('startDate');
+            $table->integer("weight");
+            $table->string("start");
+            $table->string("goal");
             $table->timestamps();
         });
     }
