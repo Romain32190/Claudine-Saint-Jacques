@@ -7,16 +7,20 @@
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="name">Nom</label>
-					<input type="text" class="form-control" name="name" id="name" placeholder="St jean pied de porc">
+					<input required type="text" class="form-control" name="name" id="name" placeholder="St jean pied de porc">
 				</div>
 				<div class="form-group">
 					<label for="latitude">latitude</label>
-					<input type="text" class="form-control" name="latitude" id="latitude" placeholder="0.">
+					<input required type="text" class="form-control" name="latitude" id="latitude" placeholder="0.">
 				</div>
 				<div class="form-group">
 					<label for="longitude">longitude</label>
-					<input type="text" class="form-control" name="longitude" id="longitude" placeholder="0.">
+					<input required type="text" class="form-control" name="longitude" id="longitude" placeholder="0.">
 				</div>
+				<div class="form-group">
+					<label for="steporder">position etape</label>
+					<input required type="text" class="form-control" name="steporder" id="steporder">
+				</div>				
 				<!-- 		  <div class="form-group">
 				<label for="exampleInputFile">File input</label>
 				<input type="file" id="exampleInputFile">
@@ -36,8 +40,8 @@
 				<ul>
 					
 				@foreach ($steps as $key => $step)
-					<p style="line-height: 0.5em"><i id="{{$step->steporder}}" class="fa fa-plus-circle innerStep" aria-hidden="true"></i></p>
-					<p style="line-height: 0.5em" id="{{$step->id}}" class="edtStp">{{$step->name}}</p>
+					<p style="line-height: 0.5em"><i title="inserer une etape ici" style="cursor: pointer;" data-id="{{$step->steporder}}" class="fa fa-plus-circle innerStep" aria-hidden="true"></i></p>
+					<p style="line-height: 0.5em" id="{{$step->id}}">&nbsp;|&nbsp;&nbsp;<a title="editer etape" href="{{route('steps.edit',$step)}}">{{$step->name}}</a></p>
 				@endforeach
 				<!-- last ?? -->
 				</ul>
@@ -45,4 +49,13 @@
 		</div>
 	</div>
 </div>
+
+
+@endsection
+@section('script')
+<script>
+	$('.innerStep').on('click', function(e) {
+		$('#steporder').val($(this).data('id'));
+	});
+</script>
 @endsection

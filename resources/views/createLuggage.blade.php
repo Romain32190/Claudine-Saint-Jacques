@@ -50,3 +50,13 @@
 </div>
 
 @endsection
+
+@section('script')
+<script>
+    $('#datetimepicker1').datepicker({
+    format: "yyyy-dd-mm",
+    orientation: "bottom-right",
+    todayHighlight: true
+  });
+</script>
+@endsection
