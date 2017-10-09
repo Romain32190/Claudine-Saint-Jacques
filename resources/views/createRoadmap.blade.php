@@ -25,12 +25,7 @@
             @endforeach
 
           </select> </p>
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-6">
-              </div>
-            </div>
-          </form>
-        </div>
+      </div>
       </div>
     @endforeach
 </div>
@@ -41,18 +36,6 @@
     <div class="panel panel-default">
       <div class="panel-heading" style="background-color: #0000FF; color:white;">
         {{$pilgrim->name}}
-      </div>
-
-      <div class="panel-body">
-
-
-        <p>nom : {{$pilgrim->name}}</p>
-
-          <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-6">
-            </div>
-          </div>
-        </form>
       </div>
     </div>
   @endforeach
@@ -65,19 +48,7 @@
           <div class="panel-heading" style="background-color: #0000FF; color:white;">
             {{$driver->name}}
           </div>
-
-          <div class="panel-body">
-
-
-            <p>name : </p>
-
-              <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-6">
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+      </div>
       @endforeach
 
 </div>
