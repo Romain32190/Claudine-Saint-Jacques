@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class StepController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +41,21 @@ class StepController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stepsAfter = Step::where('steporder', '>=', $request->steporder)->get();
+
+        foreach ($stepsAfter as  $step) {
+            $step->steporder++;
+            $step->save();
+        }
+        
+        $step = new Step();
+        $step->name=$request->name;
+        $step->latitude=$request->latitude;
+        $step->longitude=$request->longitude;
+        $step->steporder=$request->steporder;
+        $step->save();
+
+        return redirect()->back();
     }
 
     /**

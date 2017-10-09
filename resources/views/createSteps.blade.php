@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
 	<div class="row">
 		<div class="col col-md-9">
-			<form action="{{ route('steps.store') }}" >
+			<form action="{{ route('steps.store') }}" method="POST">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="name">Nom</label>
@@ -54,8 +55,19 @@
 @endsection
 @section('script')
 <script>
+	function colorSelectedStep(){
+		$('.innerStep').removeClass( "selectedStep" );
+		var r = $('#steporder').val();
+		$("[data-id="+r+"]").addClass('selectedStep');
+	}
+
 	$('.innerStep').on('click', function(e) {
 		$('#steporder').val($(this).data('id'));
+		colorSelectedStep();
+	});
+
+	$('#steporder').on('change', function(e) {
+		colorSelectedStep();
 	});
 </script>
 @endsection

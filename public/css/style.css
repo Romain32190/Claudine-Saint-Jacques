@@ -31,3 +31,7 @@ body {
         [data-drop-target] {
             margin: 25px;
 		}
+
+.selectedStep {
+    color: red;
+}
