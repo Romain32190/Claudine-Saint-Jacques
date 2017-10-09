@@ -45,7 +45,7 @@
       @endforeach
 
 </div>
-<div data-drop-target="true" style="margin-left: 42em; height : 50em; width: 43em;"></div>
+<div data-drop-target="true" style="margin-left: 43.5em; height : 39em; width: 43em;"></div>
 </div>
 
 
