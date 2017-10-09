@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default" style="background-color: white;">
+<nav class="navbar navbar-default" style="background-color: #0000FF; color:white;">
     <div class="container">
         <div class="navbar-header">
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}" style="color: black;">
+            <a class="navbar-brand" href="{{ url('/') }}" style="color: white;">
                 {{config('app.name')}}
             </a>
            <ul class="nav navbar-nav">

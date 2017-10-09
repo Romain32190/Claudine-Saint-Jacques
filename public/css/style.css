@@ -1,37 +1,33 @@
-#scrollbox3 {
+html {
     overflow: auto;
-    width: 400px;
-    height: 360px;
-    padding: 0 5px;
-    border: 1px solid #b7b7b7;
 }
 
-.track3 {
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
     width: 10px;
-    background: rgba(0, 0, 0, 0);
-    margin-right: 2px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
     border-radius: 10px;
-    -webkit-transition: background 250ms linear;
-    transition: background 250ms linear;
 }
 
-.track3:hover,
-.track3.dragging {
-    background: #d9d9d9; 
-    background: rgba(0, 0, 0, 0.15);
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: gray; 
 }
 
-.handle3 {
-    width: 7px;
-    right: 0;
-    background: #999;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 7px;
-    -webkit-transition: width 250ms;
-    transition: width 250ms;
-}
 
-.track3:hover .handle3,
-.track3.dragging .handle3 {
-    width: 10px;
-}
+		.drag-enter {
+            border: 2px dashed #000;
+        }
+
+        [data-drop-target] {
+            margin: 25px;
+		}
