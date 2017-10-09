@@ -29,7 +29,7 @@ class StepController extends Controller
      */
     public function create()
     {
-
+        return view('createSteps', [ 'steps' => Step::orderBy('steporder', 'asc')->get() ]);
     }
 
     /**
