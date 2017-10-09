@@ -4,24 +4,23 @@
 <div class="container">
 	<div class="row">
 		<div class="col col-md-9">
-			<form action="{{ route('steps.store') }}" method="POST">
+			<form action="{{ route('steps.update', $step) }}" method="POST">
+				{{ method_field('PATCH') }}
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="name">Nom</label>
-					<input required type="text" class="form-control" name="name" id="name" placeholder="St jean pied de porc">
+					<input required type="text" class="form-control" name="name" id="name" placeholder="St jean pied de porc" value="{{$step->name}}">
 				</div>
 				<div class="form-group">
 					<label for="latitude">latitude</label>
-					<input required type="text" class="form-control" name="latitude" id="latitude" placeholder="0.">
+					<input required type="text" class="form-control" name="latitude" id="latitude" placeholder="0." value="{{$step->latitude}}">
 				</div>
 				<div class="form-group">
 					<label for="longitude">longitude</label>
-					<input required type="text" class="form-control" name="longitude" id="longitude" placeholder="0.">
+					<input required type="text" class="form-control" name="longitude" id="longitude" placeholder="0." value="{{$step->longitude}}">
 				</div>
-				<div class="form-group">
-					<label for="steporder">position etape</label>
-					<input required type="text" class="form-control" name="steporder" id="steporder">
-				</div>				
+
+				<!-- <blockquote>TODO: changer la position de l'etape</blockquote> -->
 				<!-- 		  <div class="form-group">
 				<label for="exampleInputFile">File input</label>
 				<input type="file" id="exampleInputFile">
@@ -32,11 +31,11 @@
 				  <input type="checkbox"> Check me out
 				</label>
 				</div> -->
-				<button type="submit" class="btn btn-default">Enregistrer</button>
+				<button type="submit" class="btn btn-default">Mettre à jour</button>
 			</form>
 		</div>
 
-		<div class="col col-md-3" style="height: 85vh;">
+{{--		<div class="col col-md-3" style="height: 85vh;">
 			<div style="overflow-y:scroll; height: 100%;">
 				<ul>
 					
@@ -47,27 +46,12 @@
 				<!-- last ?? -->
 				</ul>
 			</div>
-		</div>
+		</div> --}}
 	</div>
 </div>
 
 
 @endsection
 @section('script')
-<script>
-	function colorSelectedStep(){
-		$('.innerStep').removeClass( "selectedStep" );
-		var r = $('#steporder').val();
-		$("[data-id="+r+"]").addClass('selectedStep');
-	}
 
-	$('.innerStep').on('click', function(e) {
-		$('#steporder').val($(this).data('id'));
-		colorSelectedStep();
-	});
-
-	$('#steporder').on('change', function(e) {
-		colorSelectedStep();
-	});
-</script>
 @endsection

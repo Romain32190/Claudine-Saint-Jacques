@@ -47,7 +47,7 @@ class StepController extends Controller
             $step->steporder++;
             $step->save();
         }
-        
+
         $step = new Step();
         $step->name=$request->name;
         $step->latitude=$request->latitude;
@@ -75,9 +75,9 @@ class StepController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Step $step)
     {
-        //
+        return view('editStep', ['step' => $step]);
     }
 
     /**
@@ -87,9 +87,14 @@ class StepController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Step $step)
     {
-        //
+        $step->name = $request->name;
+        $step->latitude = $request->latitude;
+        $step->longitude = $request->longitude;
+        // $step->steporder = $request->steporder;
+        $step->save();
+        return redirect(url('steps/create'));
     }
 
     /**
