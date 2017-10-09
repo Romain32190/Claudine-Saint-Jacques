@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::get('/createroadmap', 'RoadmapsController@index');
 
@@ -25,7 +21,7 @@ Route::get('/createLuggage', 'LuggagesController@create');
 Route::post('/storeLuggage', 'LuggagesController@store');
 
 
-Route::get('/carte', function(){
+Route::get('/', function(){
 	return view('carte');
 });
 

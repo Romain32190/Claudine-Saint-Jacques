@@ -21,7 +21,7 @@ class AddressController extends Controller
           'city' => required()
       ]);
 
-      Post::create(request()->all();
+      address::create(request()->all());
     }
 
     public function create(){

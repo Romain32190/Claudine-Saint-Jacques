@@ -17,7 +17,7 @@ class PilgrimController extends Controller
           'firstname' => required()
       ]);
 
-      Post::create(request()->all());
+      pilgrims::create(request()->all());
     }
 
       public function create(){

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ config('app.locale') }}">
   @include('layouts.head')
 
     <body id="app-layout">
