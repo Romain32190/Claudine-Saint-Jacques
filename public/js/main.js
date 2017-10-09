@@ -1,3 +1,12 @@
+$(function () {
+  $('#datetimepicker1').datepicker({
+    format: "yyyy-dd-mm",
+    orientation: "bottom-right",
+    todayHighlight: true
+  });
+});
+ 
+
 function initMap(){
 var latLng = {lat:  44.608288, lng: 2.032871};
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -89,4 +98,6 @@ for(var i = 0; i < targets.length; i++) {
   targets[i].addEventListener("dragenter", handleDragEnterLeave);
   targets[i].addEventListener("dragleave", handleDragEnterLeave);
 }
+
+
 
