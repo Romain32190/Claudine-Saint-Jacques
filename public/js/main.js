@@ -49,7 +49,7 @@ function handleOverDrop(e) {
   //Depending on the browser in use, not using the preventDefault() could cause any number of strange default behaviours to occur.
   if (e.type != "drop") {
     return;
-    console.log(handleOverDrop); //Means function will exit if no "drop" event is fired.
+    console.log(e); //Means function will exit if no "drop" event is fired.
   }
   //Stores dragged elements ID in var draggedId
   var draggedId = e.dataTransfer.getData("text");

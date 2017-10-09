@@ -3,8 +3,8 @@
 @section('content')
   <div class="col-sm-2"  style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
-    @foreach ($luggages as $luggage)
-      <div class="panel panel-default box navy" id="box1" draggable="true">
+    @foreach ($luggages as $key => $luggage)
+      <div class="panel panel-default box navy" id="luggage-{{$luggage->id}}" draggable="true">
         <div class="panel-heading" style="background-color: #0000FF; color:white;">
           Bagages
         </div>
@@ -32,8 +32,8 @@
 
 <div class="col-sm-2" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
-  @foreach ($pilgrims as $pilgrim)
-    <div class="panel panel-default box red" id="box2" draggable="true">
+  @foreach ($pilgrims as $key => $pilgrim)
+    <div class="panel panel-default box red" id="pilgrim-{{$pilgrim->id}}" draggable="true">
       <div class="panel-heading" style="background-color: #0000FF; color:white;">
         {{$pilgrim->name}}
       </div>
@@ -43,8 +43,8 @@
 
 <div class="col-sm-2" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
-      @foreach ($drivers as $driver)
-        <div draggable="true" id="box3" class="panel panel-default box green">
+      @foreach ($drivers as $key => $driver)
+        <div draggable="true" id="drivers-{{$driver->id}}" class="panel panel-default box green">
           <div class="panel-heading"  style="background-color: #0000FF; color:white;">
             {{$driver->name}}
           </div>
@@ -52,7 +52,7 @@
       @endforeach
 
 </div>
-<div data-drop-target="true" style="margin-left: 42em; height : 50em; width: 45em;"></div>
+<div data-drop-target="true" style="margin-left: 42em; height : 50em; width: 43em;"></div>
 </div>
 
 
