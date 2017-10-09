@@ -10,12 +10,12 @@
         </div>
 
         <div class="panel-body">
-          @foreach ($luggages as $luggage)
-
-          <h3>{{$pilgrim->name}}</h3>
+          
+          
+          <h3>{{$luggage->pilgrim['name']}}</h3>
           <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
-          <p>{{$luggage->weight}}</p>
-
+          <p>{{$luggage->weight}} kg</p>
+          
 
            </p>
       </div>

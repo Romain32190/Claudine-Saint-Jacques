@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\pilgrims;
+use App\pilgrim;
 use Illuminate\Http\Request;
 
 class PilgrimController extends Controller
@@ -17,7 +17,7 @@ class PilgrimController extends Controller
           'firstname' => required()
       ]);
 
-      pilgrims::create(request()->all());
+      pilgrim::create(request()->all());
     }
 
       public function create(){
