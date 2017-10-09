@@ -7,8 +7,10 @@
                 {{config('app.name')}}
             </a>
            <ul class="nav navbar-nav">
-             <li><a href="{{ url('/createroadmap') }}" style="font-size: 16px; color: white; margin-top:0.1em;">Feuille de route</a></li>
-             <li><a href="#"></a></li>
+
+             <li><a href="url('/')" style="font-size: 16px; color: black;">Carte</a></li>
+             <li><a href="{{url('/createRoadmap')}}">Feuille de route</a></li>
+             <li><a href="{{url('/createLuggage')}}">Créer un baggage</a></li>
              <li><a href="#"></a></li>
           </ul>
         </div>

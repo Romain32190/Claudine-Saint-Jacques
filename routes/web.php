@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/createroadmap', 'RoadmapsController@index');
+Route::get('/createRoadmap', 'RoadmapsController@index');
 
 
 //luggages
