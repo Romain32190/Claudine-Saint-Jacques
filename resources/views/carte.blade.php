@@ -6,8 +6,8 @@
   <head>
     <style>
        #map {
-        height: 500px;
-        width: 800px;
+        height: 600px;
+        width: 1200px;
        }
     </style>
   </head>
