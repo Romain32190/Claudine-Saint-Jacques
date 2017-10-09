@@ -8,8 +8,8 @@
             </a>
            <ul class="nav navbar-nav">
              <li><a href="/carte" style="font-size: 16px; color: black;">Carte</a></li>
-             <li><a href="/createroadmap">Feuille de route</a></li>
-             <li><a href="#"></a></li>
+             <li><a href="/createRoadmap">Feuille de route</a></li>
+             <li><a href="/createLuggage">créer un baggage</a></li>
              <li><a href="#"></a></li>
           </ul>
         </div>

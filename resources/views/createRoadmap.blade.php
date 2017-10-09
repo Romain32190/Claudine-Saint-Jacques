@@ -10,21 +10,14 @@
         </div>
 
         <div class="panel-body">
+          @foreach ($luggages as $luggage)
+
+          <h3>{{$pilgrim->name}}</h3>
+          <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
+          <p>{{$luggage->weight}}</p>
 
 
-          <p>poids : {{$luggage->weight}}</p>
-          <p>de : <select style="width: 100%; height:100%;" class="form-control form-control-sm" name="">
-            @foreach ($steps as $step)
-              <option value= {{$step->name}} > {{$step->name}} </option>
-            @endforeach
-
-          </select></p>
-          <p>a :<select style="width: 100%; height: 100%" class="form-control form-control-sm" name="">
-            @foreach ($steps as $step)
-              <option value= {{$step->name}} > {{$step->name}} </option>
-            @endforeach
-
-          </select> </p>
+           </p>
       </div>
       </div>
     @endforeach
