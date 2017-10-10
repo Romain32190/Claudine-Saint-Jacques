@@ -3,11 +3,12 @@
 @section('content')
   <div class="col-sm-2"  style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
-    @foreach ($luggages as $key => $luggage)
+    @foreach ($luggages as $luggage)
       <div class="panel panel-default box navy" id="luggage-{{$luggage->id}}" draggable="true">
         <div class="panel-heading" style="background-color: #0000FF; color:white;">
           Bagages
         </div>
+
 
         <div class="panel-body">
 

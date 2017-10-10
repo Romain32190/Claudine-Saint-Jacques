@@ -11,16 +11,18 @@ class PilgrimController extends Controller
       $pilgrims = pilgrim::all();
     }
 
-    public function store(Request $request){
+    public function store(){
+
       $this -> validate(request(), [
           'name' => required(),
           'firstname' => required()
       ]);
 
-      pilgrim::create(request()->all());
+      Post::create(request(['name', 'firstname']));
+      return redirect('/');
     }
 
       public function create(){
-        return view ('pilgrim.create');
+        return view ('createPilgrim');
       }
 }
