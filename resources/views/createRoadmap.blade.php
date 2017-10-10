@@ -10,12 +10,12 @@
         </div>
 
         <div class="panel-body">
-          
-          
+
+
           <h3>{{$luggage->pilgrim['name']}}</h3>
           <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
           <p>{{$luggage->weight}} kg</p>
-          
+
 
            </p>
       </div>
@@ -45,7 +45,12 @@
       @endforeach
 
 </div>
-<div data-drop-target="true" style="margin-left: 43.5em; height : 39em; width: 43em;"></div>
+<div style="display:flex;">
+<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
+<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
+<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
+<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
+</div>
 </div>
 
 
