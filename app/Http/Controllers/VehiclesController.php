@@ -24,7 +24,7 @@ class VehiclesController extends Controller
           'technicalControl' => required()
       ]);
 
-      Post::create(request()->all());
+      vehicles::create(request()->all());
     }
 
       public function create(){

@@ -13,12 +13,13 @@
         <div class="panel-body">
 
 
-              <h3></h3>
-
+          <h3>{{$luggage->pilgrim['name']}}</h3>
           <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
-          <p>{{$luggage->weight}}</p>
+          <p>{{$luggage->weight}} kg</p>
 
-        </div>
+
+           </p>
+      </div>
       </div>
     @endforeach
 </div>
@@ -49,4 +50,8 @@
 
 
 
+@endsection
+
+@section('script')
+  <script src={{asset('js/main.js')}} type="text/javascript"></script>
 @endsection

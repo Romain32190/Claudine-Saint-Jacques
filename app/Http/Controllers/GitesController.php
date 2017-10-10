@@ -19,7 +19,7 @@ class GitesController extends Controller
 
     ]);
 
-    Post::create(request()->all());
+    gites::create(request()->all());
   }
     public function create(){
       return view ('gite.create');

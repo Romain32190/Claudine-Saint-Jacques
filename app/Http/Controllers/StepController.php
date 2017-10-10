@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class StepController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +30,7 @@ class StepController extends Controller
      */
     public function create()
     {
-
+        return view('createSteps', [ 'steps' => Step::orderBy('steporder', 'asc')->get() ]);
     }
 
     /**
@@ -40,7 +41,21 @@ class StepController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stepsAfter = Step::where('steporder', '>=', $request->steporder)->get();
+
+        foreach ($stepsAfter as  $step) {
+            $step->steporder++;
+            $step->save();
+        }
+
+        $step = new Step();
+        $step->name=$request->name;
+        $step->latitude=$request->latitude;
+        $step->longitude=$request->longitude;
+        $step->steporder=$request->steporder;
+        $step->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -60,9 +75,9 @@ class StepController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Step $step)
     {
-        //
+        return view('editStep', ['step' => $step]);
     }
 
     /**
@@ -72,9 +87,14 @@ class StepController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Step $step)
     {
-        //
+        $step->name = $request->name;
+        $step->latitude = $request->latitude;
+        $step->longitude = $request->longitude;
+        // $step->steporder = $request->steporder;
+        $step->save();
+        return redirect(url('steps/create'));
     }
 
     /**

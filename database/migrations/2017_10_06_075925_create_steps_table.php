@@ -15,6 +15,7 @@ class CreateStepsTable extends Migration
     {
         Schema::create('steps', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('steporder');
             $table->string('name');
             $table->decimal('latitude', 13, 11)->nullable();
             $table->decimal('longitude', 13, 11)->nullable();

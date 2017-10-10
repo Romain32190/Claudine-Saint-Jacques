@@ -27,7 +27,7 @@ class DriversController extends Controller
           'drinvingLicence' => required()
       ]);
 
-      Post::create(request()->all());
+      drivers::create(request()->all());
     }
 
 }
