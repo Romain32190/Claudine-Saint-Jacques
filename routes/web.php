@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//roadmaps
 Route::get('/createRoadmap', 'RoadmapsController@index');
 
 
@@ -24,13 +24,16 @@ Route::get('/createLuggage', 'LuggagesController@create');
 
 Route::post('/storeLuggage', 'LuggagesController@store');
 
-
+//carte
 Route::get('/carte', function(){
 	return view('carte');
 });
 
+//steps
 Route::resource('steps', 'StepController');
 
+//pilgrims
 
+Route::get('/pilgrims', 'PilgrimController@index');
 
-Route::post('pilgrims', 'PilgrimController@index');
+Route::get('/createPilgrim', 'PilgrimController@create');

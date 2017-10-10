@@ -3,22 +3,22 @@
 @section('content')
   <div class="col-sm-2"  style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
-    @foreach ($luggages as $key => $luggage)
+    @foreach ($luggages as $luggage)
       <div class="panel panel-default box navy" id="luggage-{{$luggage->id}}" draggable="true">
         <div class="panel-heading" style="background-color: #0000FF; color:white;">
           Bagages
         </div>
 
-        <div class="panel-body">
-          @foreach ($luggages as $luggage)
 
-          <h3>{{$pilgrim->name}}</h3>
+        <div class="panel-body">
+
+
+              <h3></h3>
+
           <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
           <p>{{$luggage->weight}}</p>
 
-
-           </p>
-      </div>
+        </div>
       </div>
     @endforeach
 </div>
@@ -46,7 +46,7 @@
 
 </div>
 <div data-drop-target="true" style="margin-left: 43.5em; height : 39em; width: 43em;"></div>
-</div>
+
 
 
 @endsection
