@@ -2,7 +2,7 @@
 
 @section('luggage')
 
-<div class="">
+<div class="container">
   <form class="" action="/storeLuggage" method="post">
     {{csrf_field()}}
     <label for="pilgrim">Pelerin</label>
@@ -32,7 +32,6 @@
             </div>
         </div>
     </div>
-    </div>
     <label for="start">Lieu départ</label>
     <select class="form-control" name="start" id="start">
       @foreach ($gites as $gite)
@@ -47,6 +46,8 @@
     </select><br>
     <button type="submit" name="button" class="btn btn-primary" >Envoyez</button>
   </form>
+</div>
+</div>
 </div>
 
 @endsection
