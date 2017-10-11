@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class pilgrim extends Model
 {
-    protected $fillable=['name', 'firstname'];
+    protected $fillable=['name', 'firstname', 'id_address'];
 
     public function luggages (){
 
       return $this->hasMany(pilgrim::class);
+    }
+
+    public function address (){
+      return $this->hasMany(address::class);
     }
 }

@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//address
 
+Route::post('/storeAddress', 'AddressController@store');
 
 //roadmaps
 
@@ -32,8 +34,15 @@ Route::get('/', function(){
 //steps
 Route::resource('steps', 'StepController');
 
+// Route::get('/createSteps', 'StepController@create');
+//
+// Route::post('/storeSteps', 'StepController@store')
+
 //pilgrims
+Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
 
 Route::get('/pilgrims', 'PilgrimController@index');
 
 Route::get('/createPilgrim', 'PilgrimController@create');
+
+Route::post('/storeIdentity', 'PilgrimController@store');

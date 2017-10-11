@@ -47,6 +47,7 @@
     </select><br>
     <button type="submit" name="button" class="btn btn-primary" >Envoyez</button>
   </form>
+  @extends('layouts.errors')
 </div>
 
 @endsection

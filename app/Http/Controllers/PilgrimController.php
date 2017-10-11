@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\address;
 use App\pilgrim;
 use Illuminate\Http\Request;
 
@@ -14,15 +15,19 @@ class PilgrimController extends Controller
     public function store(){
 
       $this -> validate(request(), [
-          'name' => required(),
-          'firstname' => required()
+        'street' => 'required',
+        'zipcode' => 'required',
+        'city' => 'required'
       ]);
 
-      Post::create(request(['name', 'firstname']));
-      return redirect('/');
+      address::create(request(['number', 'street', 'zipcode', 'city', 'flatNumber', 'floor', 'flatName', 'phone', 'mobile']));
+      return redirect('/storeIdentity');
     }
+
+      //pilgrim::create(request(['name', 'firstname', 'id_address'=> $id_address]));
 
       public function create(){
         return view ('createPilgrim');
       }
-}
+
+    }
