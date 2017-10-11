@@ -6,6 +6,8 @@
   <form class="" action="/storeAddress" method="post">
     {{csrf_field()}}
 
+<div class="row">
+  <div class="col-sm-6">
     <label for="name">Nom</label>
     <input class="form-control" type="text" name="name" id="name">
 
@@ -22,7 +24,8 @@
 
       <label for="flatnumber">Appartement n°</label>
       <input class="form-control" type="text" name="flatnumber" id="flatnumber">
-
+</div>
+  <div class="col-sm-6">
       <label for="floor">Etage</label>
       <input class="form-control" type="text" name="floor" id="floor" >
 
@@ -40,8 +43,10 @@
 
       <label for="mobile">Portable</label>
       <input class="form-control" type="text" name="mobile" id="mobile"><br>
-
-    <button class="btn btn-primary" type="submit" name="button">Créer</button>
+</div>
+</div>
+<button class="btn btn-primary" type="submit" name="button">Créer</button>
+</div>
   </form>
 </div>
   @include('layouts.errors')
