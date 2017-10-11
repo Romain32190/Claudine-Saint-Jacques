@@ -9,12 +9,12 @@
         @yield('content')
         @yield('luggage')
       </div>
-      
+
 
 
     <!-- JavaScripts -->
     @include('layouts.footer')
     @yield('script')
   </body>
-  
+
 </html>

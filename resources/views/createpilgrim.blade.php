@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('luggage')
+@section('pilgrim')
 
-<div class="container">
-  <form class="" action="/storeLuggage" method="post">
+<div class="">
+  <form class="" action="" method="post">
     {{csrf_field()}}
-    <label for="pilgrim">Pelerin</label>
-    <select class="form-control" name="id_pilgrims">
+    <label for="pilgrim">Prénom</label>
+    <input class="form-control"></input>
       @foreach($pilgrims as $pilgrim)
       <option value="{{$pilgrim->id}}">{{$pilgrim->name}} {{$pilgrim->firstname}}</option>
       @endforeach
@@ -32,6 +32,7 @@
             </div>
         </div>
     </div>
+    </div>
     <label for="start">Lieu départ</label>
     <select class="form-control" name="start" id="start">
       @foreach ($gites as $gite)
@@ -46,19 +47,6 @@
     </select><br>
     <button type="submit" name="button" class="btn btn-primary" >Envoyez</button>
   </form>
-  @extends('layouts.errors')
-</div>
-</div>
 </div>
 
-@endsection
-
-@section('script')
-<script>
-    $('#datetimepicker1').datepicker({
-    format: "yyyy-dd-mm",
-    orientation: "bottom-right",
-    todayHighlight: true
-  });
-</script>
 @endsection
