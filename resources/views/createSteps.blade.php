@@ -66,7 +66,7 @@
 		colorSelectedStep();
 	});
 
-	$('#steporder').on('change', function(e) {
+	$('#steporder').on('keyup', function(e) {
 		colorSelectedStep();
 	});
 </script>
