@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//drivers
+
+Route::resource('drivers', 'DriversController');
+
 //address
 
 Route::post('/storeAddress', 'AddressController@store');
@@ -34,9 +38,6 @@ Route::get('/', function(){
 //steps
 Route::resource('steps', 'StepController');
 
-// Route::get('/createSteps', 'StepController@create');
-//
-// Route::post('/storeSteps', 'StepController@store')
 
 //pilgrims
 Route::post('/storeIdentity', 'PilgrimController@storeIdentity');

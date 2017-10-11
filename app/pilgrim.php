@@ -11,7 +11,7 @@ class pilgrim extends Model
 
     public function luggages (){
 
-      return $this->hasMany(pilgrim::class);
+      return $this->hasMany(luggages::class);
     }
 
     public function address (){

@@ -12,5 +12,8 @@ class address extends Model
 
       return $this->belongsTo(pilgrim::class);
     }
+    public function drivers(){
 
+      return $this->belongsTo(drivers::class);
+    }
 }
