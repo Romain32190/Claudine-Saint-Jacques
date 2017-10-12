@@ -1,10 +1,11 @@
 @extends('layouts.app')
+
 @section('content')
 
 <div class="container">
 	<div class="row">
 		<div class="col col-md-9">
-			<form action="{{ route('steps.store') }}" method="POST">
+			<form action={{route('steps.create')}} method="POST">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="name">Nom</label>
@@ -21,7 +22,7 @@
 				<div class="form-group">
 					<label for="steporder">position etape</label>
 					<input required type="text" class="form-control" name="steporder" id="steporder">
-				</div>				
+				</div>
 				<!-- 		  <div class="form-group">
 				<label for="exampleInputFile">File input</label>
 				<input type="file" id="exampleInputFile">
@@ -39,7 +40,7 @@
 		<div class="col col-md-3" style="height: 85vh;">
 			<div style="overflow-y:scroll; height: 100%;">
 				<ul>
-					
+
 				@foreach ($steps as $key => $step)
 					<p style="line-height: 0.5em"><i title="inserer une etape ici" style="cursor: pointer;" data-id="{{$step->steporder}}" class="fa fa-plus-circle innerStep" aria-hidden="true"></i></p>
 					<p style="line-height: 0.5em" id="{{$step->id}}">&nbsp;|&nbsp;&nbsp;<a title="editer etape" href="{{route('steps.edit',$step)}}">{{$step->name}}</a></p>
@@ -49,6 +50,7 @@
 			</div>
 		</div>
 	</div>
+		@extends('layouts.errors')
 </div>
 
 
