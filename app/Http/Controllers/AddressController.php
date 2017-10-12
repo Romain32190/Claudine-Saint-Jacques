@@ -34,7 +34,7 @@ class AddressController extends Controller
           $pilgrim->id_address = $id_address;
 
           $pilgrim->save();
-          
+
        return view ('/carte');
     }
 
