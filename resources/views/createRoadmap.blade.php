@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="col-sm-2"  style="overflow:scroll; scrollbar force-overflow; height:100%;">
+  <div class="col-sm-2" id="divluggage" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
    @foreach ($luggages as $luggage)
       <div class="panel panel-default box navy" id="luggage-{{$luggage->id}}" draggable="true">
@@ -12,7 +12,7 @@
     @endforeach
 </div>
 
-<div class="col-sm-2" style="overflow:scroll; scrollbar force-overflow; height:100%;">
+<div class="col-sm-2" id="divpilgrim" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
  @foreach ($pilgrims as $key => $pilgrim)
     <div class="panel panel-default box red" id="pilgrim-{{$pilgrim->id}}" draggable="true">
@@ -23,7 +23,7 @@
   @endforeach
 </div>
 
-<div class="col-sm-2" style="overflow:scroll; scrollbar force-overflow; height:100%;">
+<div class="col-sm-2" id="divdriver" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
      @foreach ($drivers as $key => $driver)
         <div draggable="true" id="drivers-{{$driver->id}}" class="panel panel-default box green">
