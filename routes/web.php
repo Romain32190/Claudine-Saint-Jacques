@@ -49,7 +49,7 @@ Route::get('/createPilgrim', 'PilgrimController@create');
 Route::post('/storeIdentity', 'PilgrimController@store');
 
 Route::get('/test', function () {
-	$var = App\pilgrim::find(1)->luggages();
-	return response()->json(App\pilgrim::find(1)->luggages);
+	// $var = App\pilgrim::find(1)->luggages();
+	return response()->json(App\pilgrim::find(1)->address);
 
 });

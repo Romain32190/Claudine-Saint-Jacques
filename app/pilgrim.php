@@ -19,6 +19,6 @@ class pilgrim extends Model
     }
 
     public function address (){
-      return $this->hasMany(address::class);
+      return $this->hasOne('App\address' ,'id','id_address');
     }
 }
