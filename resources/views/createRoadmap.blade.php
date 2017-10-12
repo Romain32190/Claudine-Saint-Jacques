@@ -6,20 +6,8 @@
    @foreach ($luggages as $luggage)
       <div class="panel panel-default box navy" id="luggage-{{$luggage->id}}" draggable="true">
         <div class="panel-heading" style="background-color: #0000FF ; color:white;">
-          Bagages
+          {{$luggage->pilgrim['name']}}
         </div>
-
-
-       <div class="panel-body">
-
-
-         <h3>{{$luggage->pilgrim['name']}}</h3>
-          <p>{{$luggage->start}}</p><p>{{$luggage->goal}}</p><br>
-          <p>{{$luggage->weight}} kg</p>
-
-
-          </p>
-      </div>
       </div>
     @endforeach
 </div>
@@ -46,11 +34,37 @@
       @endforeach
 
 </div>
-<div style="display:flex;">
-<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
-<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
-<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
-<div data-drop-target="true" style="height : 39em; width: 10em;"></div>
+<table class="table" style="width: 45em;" >
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Bagages</th>
+      <th>Pelerins</th>
+      <th>Camions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="row">1</th>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+    </tr>
+    <tr>
+      <th class="row">2</th>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+      <td data-drop-target="true"></td>
+    </tr>
+  </tbody>
+</div>
+</table>
 </div>
 </div>
 
