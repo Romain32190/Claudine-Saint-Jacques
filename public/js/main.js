@@ -84,4 +84,15 @@ for(var i = 0; i < targets.length; i++) {
 }
 
 
+$("table").delegate(".fa-trash", "click", function() {
+  $(this).parent().parent().remove();
+});
+
+$(".fa-trash").click(function(){
+  $(this).parent().parent().remove();
+});
+
+
+
+
 

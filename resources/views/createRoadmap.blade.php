@@ -32,9 +32,10 @@
       $col = randColor();
     @endphp
     @foreach ($pilgrim->luggages as $luggage)
-      <div class="panel panel-default box navy color-{{$pilgrim->id}}" id="luggage-{{$luggage->id}}" draggable="true">
+      <div class="panel panel-default box navy color-{{$pilgrim->id}}  trashable" id="luggage-{{$luggage->id}}" draggable="true">
         <div class="panel-heading " style="color:white;">
-          {{$luggage->pilgrim['name']}} - {{$luggage->id}}
+          {{$luggage->pilgrim['name']}} - {{$luggage->id}} <i class="fa fa-trash" aria-hidden="true" style="margin-left: 0.5em;"></i>
+
         </div>
       </div>
       @endforeach
@@ -44,9 +45,10 @@
 <div class="col-sm-2" id="divpilgrim" style="overflow:scroll; scrollbar force-overflow; height:100%;">
 
  @foreach ($pilgrims as $key => $pilgrim)
-    <div class="panel panel-default box red" id="pilgrim-{{$pilgrim->id}}" draggable="true">
+    <div class="panel panel-default box red trashable" id="pilgrim-{{$pilgrim->id}}" draggable="true">
       <div class="panel-heading color-{{$pilgrim->id}}" style=" color:white;">
-        {{$pilgrim->name}}
+        {{$pilgrim->name}} <i class="fa fa-trash" aria-hidden="true" style="margin-left: 0.5em;"></i>
+
       </div>
     </div>
   @endforeach
