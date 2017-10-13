@@ -35,3 +35,15 @@ body {
 .selectedStep {
     color: red;
 }
+
+@media print{
+    .hideprint{
+        display: none;
+    }
+
+    .printscroll{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+}
