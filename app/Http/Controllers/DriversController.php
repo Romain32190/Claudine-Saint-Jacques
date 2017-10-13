@@ -12,16 +12,17 @@ class DriversController extends Controller
 {
   public function index(){
 
-    $addresses = address::all();
+    $address = address::all();
     $vehicles = vehicles::all();
-    $drivers = drivers::all();
+    $drivers = drivers::all()->where('active', 1)->where('available', 1);
+    $inactives = drivers::all()->where('active', 0)->where('available', 1);
 
-    return view('/driversList', compact('drivers', 'vehicles', 'address'));
+    return view('/drivers.show', compact('drivers', 'vehicles', 'address', 'inactives'));
   }
 
     public function create (){
 
-      return view('CreateDrivers', ['drivers'=> Drivers::all(), 'vehicles'=>vehicles::all()]);
+      return view('drivers.create', ['drivers'=> Drivers::all(), 'vehicles'=>vehicles::all()]);
     }
 
     public function store(Request $request){
@@ -30,9 +31,9 @@ class DriversController extends Controller
           'street' => 'required',
           'zipcode' => 'required',
           'city' => 'required'
-      ]);
+        ]);
 
-      address::create(request(['number', 'street', 'zipcode', 'city', 'flatNumber', 'floor', 'flatName', 'phone', 'mobile']));
+        address::create(request(['number', 'street', 'zipcode', 'city', 'flatNumber', 'floor', 'flatName', 'phone', 'mobile']));
 
 
         $id_address = address::all()->last()->{'id'};
@@ -46,7 +47,36 @@ class DriversController extends Controller
           $driver->id_address = $id_address;
 
           $driver->save();
-          return view('/driversList');
+          return view('/driver.show');
         }
 
+
+
+      public function edit($id){
+          $driver = drivers::findOrFail($id);
+          $address = address::all();
+          $vehicles = vehicles::all();
+
+          return view('drivers.update', compact('driver', 'vehicles', 'address'));
+      }
+
+        //update drivers data
+        public function update($id, Request $request){
+
+          $driver = drivers::findOrFail($id);
+          $address = address::findOrFail($driver->id_address);
+          $vehicles = vehicles::findOrFail($driver->id_vehicles);
+
+          $address->update($request->all());
+          $vehicles->update($request->all());
+          $driver->update($request->all());
+
+          return redirect(url('drivers'));
+        }
+
+        public function delete($id){
+          $driver = drivers::find($id);
+          return 'deleted';
+
+        }
 }

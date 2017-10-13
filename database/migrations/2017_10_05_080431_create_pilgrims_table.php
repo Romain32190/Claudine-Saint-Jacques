@@ -18,6 +18,7 @@ class CreatePilgrimsTable extends Migration
             $table->text('name');
             $table->text('firstname');
             $table->integer('id_address');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

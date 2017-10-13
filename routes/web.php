@@ -40,10 +40,12 @@ Route::resource('steps', 'StepController');
 
 
 //pilgrims
-Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
+Route::resource('pilgrims', 'PilgrimController');
 
-Route::get('/pilgrims', 'PilgrimController@index');
-
-Route::get('/createPilgrim', 'PilgrimController@create');
-
-Route::post('/storeIdentity', 'PilgrimController@store');
+// Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
+//
+// Route::get('/pilgrims', 'PilgrimController@index');
+//
+// Route::get('/createPilgrim', 'PilgrimController@create');
+//
+// Route::post('/storeIdentity', 'PilgrimController@store');
