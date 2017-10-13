@@ -69,7 +69,7 @@
   <table class="table table-bordered" >
     <thead>
       <tr>
-        <th>#</th>
+        <th>Etapes et gîtes</th>
         <th>Bagages+</th>
         <th>Bagages-</th>
         <th>Pelerins+</th>
