@@ -66,39 +66,32 @@
 
 </div> --}}
 <div class="col col-md-8">
-  <table class="table" >
+  <table class="table table-bordered" >
     <thead>
       <tr>
         <th>#</th>
-        <th>Bagages-</th>
         <th>Bagages+</th>
+        <th>Bagages-</th>
+        <th>Pelerins+</th>
         <th>Pelerins-</th>
-        <th>Pelerins</th>
         {{-- <th>Camions</th> --}}
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th class="row">1</th>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-      </tr>
-      <tr>
-        <th class="row">2</th>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-        <td data-drop-target="true"></td>
-      </tr>
+
+      @foreach($steps as $key => $step)
+
+        <tr style="background-color: #B7FD9F"><td colspan="5">{{$step->name}}</td></tr>
+        <tr><td><select class="form-control">
+
+          @foreach($step->gites as $gite)
+            <option value="{{$gite->name}}">{{$gite->name}}</option>
+          @endforeach
+
+        </select>
+        </td><td data-drop-target="true"></td><td data-drop-target="true"></td><td data-drop-target="true"></td><td data-drop-target="true"></td></tr>
+        <tr><td colspan="5"><i class="fa fa-plus-circle fa-2x addRow" data-stepid="{{$step->id}}" aria-hidden="true"></i></td></tr>
+      @endforeach
     </tbody>
   </table>
 </div>

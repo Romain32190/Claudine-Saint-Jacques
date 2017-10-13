@@ -8,6 +8,7 @@ Route::get('/pilgrims', function () {
     return new PilgrimsResource(pilgrim::find(1));
 });
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes

@@ -92,7 +92,28 @@ $(".fa-trash").click(function(){
   $(this).parent().parent().remove();
 });
 
+var prefixAdress= "";
+
+$('.addRow').click(function(){
+
+var self = this;
+
+fetch(prefixAdress+'/steps/'+$(this).data('stepid'))
+.then(function(response) {
+  return response.json();
+})
+.then(function(dataGites) {
+  console.log(dataGites);
+  var options = "";
+
+  for(var i = 0; i < dataGites.length ; i++) {
+    options += '<option value="'+dataGites[i].name+'">'+dataGites[i].name+'</option>';
+  console.log(options);
+  }
+
+  $(self).parent().parent().before('<tr><td><select class="form-control">'+options+'</select></td><td data-drop-target="true"></td><td data-drop-target="true"></td><td data-drop-target="true"></td><td data-drop-target="true"></td></tr>');
+});
 
 
 
-
+});
