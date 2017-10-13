@@ -26,7 +26,7 @@
     @endforeach
   </style>
 
-  <div class="col-sm-2" id="divluggage" style="overflow:scroll; scrollbar force-overflow; height:100%;">
+  <div class="col-sm-2 hideprint" id="divluggage" style="overflow-y:scroll; overflow-x: hidden; scrollbar force-overflow; height:100%;">
    @foreach ($pilgrims as $pilgrim)
     @php
       $col = randColor();
@@ -42,7 +42,7 @@
     @endforeach
 </div>
 
-<div class="col-sm-2" id="divpilgrim" style="overflow:scroll; scrollbar force-overflow; height:100%;">
+<div class="col-sm-2 hideprint" id="divpilgrim" style="overflow-y:scroll; overflow-x: hidden; scrollbar force-overflow; height:100%;">
 
  @foreach ($pilgrims as $key => $pilgrim)
     <div class="panel panel-default box red trashable" id="pilgrim-{{$pilgrim->id}}" draggable="true">
@@ -65,8 +65,10 @@
       @endforeach
 
 </div> --}}
-<div class="col col-md-8">
-  <table class="table table-bordered" >
+
+<div class="col col-md-8 printscroll" style="overflow-y:scroll; overflow-x: hidden; scrollbar force-overflow;height: 100%;">
+  <div class="printscroll">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Etapes et gîtes</th>
