@@ -17,6 +17,8 @@ class CreateGitesTable extends Migration
             $table->increments('id')->index();
             $table->string('name');
             $table->integer('id_address');
+            $table->integer('step_id');
+            // $table->integer('steporder');
             $table->timestamps();
         });
     }

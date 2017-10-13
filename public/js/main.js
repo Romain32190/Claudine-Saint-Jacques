@@ -36,7 +36,7 @@ function handleOverDrop(e) {
   //Depending on the browser in use, not using the preventDefault() could cause any number of strange default behaviours to occur.
   if (e.type != "drop") {
     return;
-    console.log(e); //Means function will exit if no "drop" event is fired.
+    // console.log(e); //Means function will exit if no "drop" event is fired.
   }
   //Stores dragged elements ID in var draggedId
   var draggedId = e.dataTransfer.getData("text");
@@ -48,7 +48,10 @@ function handleOverDrop(e) {
   var clone = draggedEl.cloneNode(true);
   clone.id="";
   clone.setAttribute('draggable', false);
-  console.log(clone.id)
+  $(clone).css({margin: 0, padding: 0});
+  $(clone).children().css({margin: 0, padding: '0'});
+  // $(clone).children().css({"margin": "0", "padding": "0.5 em"});
+  console.log(clone.id);
   var parentElement = document.getElementById(parentid);
   //if the event "drop" is fired on the dragged elements original drop target e.i..  it's current parentNode, 
   //then set it's css class to ="" which will remove dotted lines around the drop target and exit the function.
@@ -62,7 +65,7 @@ function handleOverDrop(e) {
 
 
 //Retrieve two groups of elements, those that are draggable and those that are drop targets:
-var draggable = document.querySelectorAll('[draggable]')
+var draggable = document.querySelectorAll('[draggable]');
 var targets = document.querySelectorAll('[data-drop-target]');
 //Note: using the document.querySelectorAll() will aquire every element that is using the attribute defind in the (..)
 

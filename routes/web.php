@@ -37,6 +37,7 @@ Route::get('/', function(){
 
 //steps
 Route::resource('steps', 'StepController');
+Route::resource('gites', 'GitesController');
 
 
 //pilgrims
@@ -50,6 +51,6 @@ Route::post('/storeIdentity', 'PilgrimController@store');
 
 Route::get('/test', function () {
 	// $var = App\pilgrim::find(1)->luggages();
-	return response()->json(App\pilgrim::find(1)->address);
+	return response()->json(App\Step::find(3)->gites);
 
 });
