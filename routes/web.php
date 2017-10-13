@@ -41,16 +41,12 @@ Route::resource('gites', 'GitesController');
 
 
 //pilgrims
-Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
+Route::resource('pilgrims', 'PilgrimController');
 
-Route::get('/pilgrims', 'PilgrimController@index');
-
-Route::get('/createPilgrim', 'PilgrimController@create');
-
-Route::post('/storeIdentity', 'PilgrimController@store');
-
-Route::get('/test', function () {
-	// $var = App\pilgrim::find(1)->luggages();
-	return response()->json(App\Step::find(3)->gites);
-
-});
+// Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
+//
+// Route::get('/pilgrims', 'PilgrimController@index');
+//
+// Route::get('/createPilgrim', 'PilgrimController@create');
+//
+// Route::post('/storeIdentity', 'PilgrimController@store');

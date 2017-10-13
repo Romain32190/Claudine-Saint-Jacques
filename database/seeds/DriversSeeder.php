@@ -23,7 +23,7 @@ class DriversSeeder extends Seeder
                 'firstname' => $faker->userName,
                 'drivingLicence' => 6788745,
                 'id_address' => $i+1,
-                'id_vehicle' => $i+1,
+                'id_vehicles' => $i+1,
 
             ]);
 

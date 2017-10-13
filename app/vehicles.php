@@ -2,17 +2,15 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class vehicles extends Model
 {
 
-    // public function drivers() {
-    //
-    //     return $this->belongsTo(drivers::class);
-    // }
+    protected $fillable=['brand','type','vehicleRegistration','capacity','maxLuggages','maxWeight','minWeight','insuranceNumber','technicalControl'];
 
     public function drivers() {
-      return $this->hasOne(drivers::class);
+      return $this->hasMany(drivers::class);
     }
 }

@@ -10,10 +10,10 @@ class address extends Model
 
     public function pilgrim(){
 
-      return $this->belongsTo(pilgrim::class);
+      return $this->hasMany(pilgrim::class);
     }
     public function drivers(){
 
-      return $this->belongsTo(drivers::class);
+      return $this->hasMany(drivers::class);
     }
 }

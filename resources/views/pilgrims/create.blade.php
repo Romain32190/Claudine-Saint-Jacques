@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-  <form class="" action="/storeAddress" method="post">
+  <form class="" action="{{route('pilgrims.store')}}" method="post">
     {{csrf_field()}}
 
 <div class="row">

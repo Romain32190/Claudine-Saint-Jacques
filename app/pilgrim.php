@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class pilgrim extends Model
 {
-
-    protected $fillable=['name', 'firstname', 'id_address'];
+    protected $fillable=['name', 'firstname', 'id_address','active'];
 
 
     public function luggages (){
@@ -19,6 +18,6 @@ class pilgrim extends Model
     }
 
     public function address (){
-      return $this->hasOne('App\address' ,'id','id_address');
+      return $this->belongsTo('App\address', 'id_address');
     }
 }
