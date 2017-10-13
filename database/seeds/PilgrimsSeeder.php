@@ -17,7 +17,7 @@ class PilgrimsSeeder extends Seeder
 
         for ($i = 0; $i < $limit; $i++) {
             pilgrim::create([ //,
-                'name' => $faker->userName,
+                'name' => $faker->lastName,
                 'firstname' => $faker->userName,
                 'id_address' => $i+1,
             ]);

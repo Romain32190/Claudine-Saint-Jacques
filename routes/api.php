@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\pilgrim;
+use App\Http\Resources\Pilgrims as PilgrimsResource;
+
+Route::get('/pilgrims', function () {
+    return new PilgrimsResource(pilgrim::find(1));
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +23,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/pilgrims', function (Request $request) {
+
+// });

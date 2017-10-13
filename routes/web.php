@@ -37,6 +37,7 @@ Route::get('/', function(){
 
 //steps
 Route::resource('steps', 'StepController');
+Route::resource('gites', 'GitesController');
 
 
 //pilgrims

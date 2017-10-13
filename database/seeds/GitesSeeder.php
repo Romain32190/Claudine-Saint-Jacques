@@ -15,12 +15,14 @@ class GitesSeeder extends Seeder
         gites::truncate();
         $faker = Faker\Factory::create('fr_FR');
 
-        $limit = 74;
+        // $limit = 74;
+        $limit = 33;
 
         for ($i = 0; $i < $limit; $i++) {
             gites::create([
-                'name' => $faker->city,
-                'id_address' => $i+16
+                'name' => $faker->company,
+                'id_address' => $i+16,
+                'step_id' => $faker->numberBetween($min = 1, $max = 19) 
 
 
             ]);
