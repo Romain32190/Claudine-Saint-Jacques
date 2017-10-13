@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\gites;
 use App\Step;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,6 @@ class StepController extends Controller
 
         return response()->json($steps);
 
-
     }
 
     /**
@@ -30,7 +30,8 @@ class StepController extends Controller
      */
     public function create()
     {
-        return view('createSteps', [ 'steps' => Step::orderBy('steporder', 'asc')->get() ]);
+
+        return view('steps.create', [ 'steps' => Step::orderBy('steporder', 'asc')->get() ]);
     }
 
     /**
@@ -77,7 +78,7 @@ class StepController extends Controller
      */
     public function edit(Step $step)
     {
-        return view('editStep', ['step' => $step]);
+        return view('steps.edit', ['step' => $step]);
     }
 
     /**
@@ -94,7 +95,7 @@ class StepController extends Controller
         $step->longitude = $request->longitude;
         // $step->steporder = $request->steporder;
         $step->save();
-        return redirect(url('steps/create'));
+        return redirect(url('steps.create'));
     }
 
     /**

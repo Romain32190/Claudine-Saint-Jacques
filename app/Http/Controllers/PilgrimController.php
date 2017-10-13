@@ -65,7 +65,14 @@ class PilgrimController extends Controller
       $address->update($request->all());
 
       return redirect(url('pilgrims'));
+    }
+
+    public function destroy($id){
 
 
+      $pilgrim = pilgrim::findOrFail($id);
+      $pilgrim->delete();
+
+      return redirect(url('pilgrims'));
     }
   }

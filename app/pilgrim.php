@@ -13,7 +13,6 @@ class pilgrim extends Model
 
     public function luggages (){
 
-      // return $this->hasMany('luggages', 'id_pilgrims');
     	return $this->hasMany('App\luggages', 'id_pilgrims','id');
     }
 

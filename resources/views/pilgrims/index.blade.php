@@ -53,12 +53,6 @@
                 <button type="submit" name="button" class="btn btn-sm btn-success">En marche</button>
               </form>
               <a href="{{ route('pilgrims.edit', $pilgrim)}}" type="button" name="button" class="btn btn-sm btn-warning">Modifier</a>
-              <form class="" action="{{route('pilgrims.update', $pilgrim)}}" method="POST">
-                {{ method_field('PATCH') }}
-                {{csrf_field()}}
-                <input type="hidden" name="available" value= 0>
-                <button type="submit" name="button" class="btn btn-sm btn-danger">Supprimer</button>
-              </form>
             </td>
           </tr>
         @endforeach
@@ -86,12 +80,18 @@
               {{$inactive->firstname}}
             </td>
             <td>
-              {{$inactive->address['number']}}" "{{$inactive->address['street']}}<br>
-              {{$inactive->address['flatNumber']}}" "{{$inactive->address['flatName']}}<br>
-              {{$inactive->address['zipcode']}}" "{{$inactive->address['city']}}<br>
+              {{$inactive->address['number']}}  {{$inactive->address['street']}}<br>
+              {{$inactive->address['flatNumber']}}  {{$inactive->address['flatName']}}<br>
+              {{$inactive->address['zipcode']}}  {{$inactive->address['city']}}<br>
             </td>
             <td>
-              {{$inactive->updatedAt}}
+              <ul>
+                <li>{{$inactive->address['phone']}}</li>
+                <li>{{$inactive->address['mobile']}}</li>
+              </ul>
+            </td>
+            <td>
+              {{$inactive->updated_at}}
             </td>
             <td>
             </td>
@@ -103,10 +103,9 @@
                 <button type="submit" name="button" class="btn btn-sm btn-info">indisponible</button>
               </form>
               <a href="{{ route ('pilgrims.edit',$inactive)}}" type="button" name="button" class="btn btn-sm btn-warning">Modifier</a>
-              <form class="" action="{{route('pilgrims.update', $inactive)}}" method="POST">
-                {{ method_field('PATCH') }}
+              <form class="" action="{{route('pilgrims.destroy', $inactive)}}" method="POST">
+                {{ method_field('DELETE') }}
                 {{csrf_field()}}
-                <input type="hidden" name="available" value= 0>
                 <button type="submit" name="button" class="btn btn-sm btn-danger">Supprimer</button>
               </form>
             </td>

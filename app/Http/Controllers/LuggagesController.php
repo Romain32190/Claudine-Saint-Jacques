@@ -40,6 +40,12 @@ class LuggagesController extends Controller
         $luggages = luggages::all();
         $gites = gites::all();
 
-        return view ('createLuggage', compact('luggages', 'pilgrims', 'gites'));
+        return view ('luggages.create', compact('luggages', 'pilgrims', 'gites'));
+      }
+
+      public function destroy($id){
+        $luggage = luggages::all();
+
+
       }
 }

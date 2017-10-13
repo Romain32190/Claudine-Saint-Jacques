@@ -9,7 +9,7 @@
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="name">Nom</label>
-					<input required type="text" class="form-control" name="name" id="name" placeholder="St jean pied de porc">
+					<input required type="text" class="form-control" name="name" id="name" placeholder="St jean pied de port">
 				</div>
 				<div class="form-group">
 					<label for="latitude">latitude</label>

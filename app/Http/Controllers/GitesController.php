@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\steps;
 use App\gites;
 use Illuminate\Http\Request;
 

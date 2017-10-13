@@ -24,9 +24,11 @@ Route::get('/createRoadmap', 'RoadmapsController@index');
 
 
 //luggages
-Route::get('/createLuggage', 'LuggagesController@create');
+Route::resource('luggages', 'LuggagesController');
 
-Route::post('/storeLuggage', 'LuggagesController@store');
+// Route::get('/createLuggage', 'LuggagesController@create');
+//
+// Route::post('/storeLuggage', 'LuggagesController@store');
 
 
 
@@ -37,16 +39,10 @@ Route::get('/', function(){
 
 //steps
 Route::resource('steps', 'StepController');
+
+//gites
 Route::resource('gites', 'GitesController');
 
 
 //pilgrims
 Route::resource('pilgrims', 'PilgrimController');
-
-// Route::post('/storeIdentity', 'PilgrimController@storeIdentity');
-//
-// Route::get('/pilgrims', 'PilgrimController@index');
-//
-// Route::get('/createPilgrim', 'PilgrimController@create');
-//
-// Route::post('/storeIdentity', 'PilgrimController@store');
