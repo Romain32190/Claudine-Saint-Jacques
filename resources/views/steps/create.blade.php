@@ -48,7 +48,12 @@
                 </div>
                 <div class="form-group">
                     <label for="parentStep">Etape parente *</label>
-                    <input required type="text" class="form-control" name="parentStep" id="parentStep" placeholder="Conque">
+                    <select class="form-control" name="parentStep" id="parentStep" >
+                      <option default>Choisissez l'étape parente</option>
+                      @foreach($steps as $step)
+                      <option value="{{$step->id}}">{{$step->name}}</option>
+                      @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="gitelatitude">latitude</label>
@@ -137,7 +142,7 @@
             </div>
         </div>
     </div>
-        {{-- @extends('layouts.errors') --}}
+        @extends('layouts.errors')
 </div>
 
 
