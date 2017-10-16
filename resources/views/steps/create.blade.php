@@ -109,6 +109,23 @@
                 </label>
                 </div> -->
 
+<<<<<<< HEAD
+						@foreach ($step->gites as $gite)
+							<p style="line-height: 0.5em" id="gite_{{$gite->id}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;
+								<a title="editer etape" href="{{route('gites.edit',$step)}}">{{$gite->name}}</a>
+							</p>
+						@endforeach
+							<p style="line-height: 0.5em">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<i title="inserer une etape ici" style="cursor: pointer;"  class="fa fa-plus-square innerStep" aria-hidden="true"></i>
+							</p>
+				@endforeach
+				<!-- last ?? -->
+				</ul>
+			</div>
+		</div>
+	</div>
+		@extends('layouts.errors')
+=======
                 <button type="submit" class="btn btn-default">Enregistrer</button>
             </form>
         </div>
@@ -138,6 +155,7 @@
         </div>
     </div>
         {{-- @extends('layouts.errors') --}}
+>>>>>>> fdfeea52126305abd9af32699fa5d2ebbce82137
 </div>
 
 

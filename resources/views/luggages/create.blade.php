@@ -3,7 +3,7 @@
 @section('luggage')
 
 <div class="container">
-  <form class="" action="/storeLuggage" method="post">
+  <form class="" action={{route('luggages.store')}} method="post">
     {{csrf_field()}}
     <label for="pilgrim">Pelerin</label>
     <select class="form-control" name="id_pilgrims">
@@ -24,7 +24,7 @@
         <div class="form-group">
           <label>Date de départ</label>
             <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
+                    <input type='date' class="form-control" name="startDate"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -56,7 +56,7 @@
 @section('script')
 <script>
     $('#datetimepicker1').datepicker({
-    format: "yyyy-dd-mm",
+    format: "yyyy-mm-dd",
     orientation: "bottom-right",
     todayHighlight: true
   });
