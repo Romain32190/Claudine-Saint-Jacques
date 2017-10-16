@@ -71,15 +71,15 @@
                 </div>
                 <div class="form-group">
                     <label for="flatnumber">Appartement n°</label>
-                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">
+                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">              
                 </div>
                 <div class="form-group">
                     <label for="floor">Etage</label>
-                    <input class="form-control" type="text" name="floor" id="floor" >
+                    <input class="form-control" type="text" name="floor" id="floor" >               
                 </div>
                 <div class="form-group">
                     <label for="flatName">Batiment</label>
-                    <input class="form-control" type="text" name="flatName" id="flatName">
+                    <input class="form-control" type="text" name="flatName" id="flatName">  
                 </div>
                 <div class="form-group">
                     <label for="zipcode">Code postal *</label>
@@ -117,7 +117,7 @@
             <div style="overflow-y:scroll; height: 100%;">
                 <ul>
 
-                @foreach ($steps as $step)
+                @foreach ($steps as $key => $step)
                     <p style="line-height: 0.5em"><i title="inserer une etape ici" style="cursor: pointer;" data-id="{{$step->steporder}}" class="fa fa-plus-circle innerStep" aria-hidden="true"></i></p>
                     <p style="line-height: 0.5em" id="{{$step->id}}">&nbsp;|&nbsp;&nbsp;
                         <a title="editer etape" href="{{route('steps.edit',$step)}}">{{$step->name}}</a>
