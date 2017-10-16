@@ -13,9 +13,6 @@
   </head>
   <body>
     <div id="map"></div>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5X7KweojFaDcKUPgFohYi-eA6D1B4Sps&callback=initMap">
-    </script>
     <script >
       function initMap(){
         var latLng = {lat:  44.608288, lng: 2.032871};
@@ -39,7 +36,10 @@
             }
             console.log(data);
           });
-}
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5X7KweojFaDcKUPgFohYi-eA6D1B4Sps&callback=initMap">
     </script>
   </body>
 </html>

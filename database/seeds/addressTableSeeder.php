@@ -16,7 +16,7 @@ class addressTableSeeder extends Seeder
       address::truncate();
       $faker = Faker\Factory::create('fr_FR');
 
-      $limit = 15;
+      $limit = 60;
 
       for ($i = 0; $i < $limit; $i++) {
           address::create([ //,

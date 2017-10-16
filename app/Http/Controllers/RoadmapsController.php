@@ -14,12 +14,14 @@ use Illuminate\Http\Request;
 
 class RoadmapsController extends Controller
 {
-    public function index(){
+    public function index($reverse = null){
+
       $roadmaps = roadmaps::all();
       $drivers = drivers::all();
       $luggages = luggages::all();
       $pilgrims = pilgrim::all();
-      $steps = Step::all();
+
+      $steps = ($reverse === 'reverse') ? Step::all()->reverse() : Step::all();
 
       return view('/createRoadmap', compact('drivers','pilgrims','luggages','vehicles','gites','address','roadmaps','steps') );
 

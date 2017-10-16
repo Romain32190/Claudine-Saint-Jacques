@@ -20,9 +20,9 @@ function handleDragStart(e) {
 //The css class "drag-enter" is append to the targets object.
 function handleDragEnterLeave(e) {
   if(e.type == "dragenter") {
-    this.className = "drag-enter" 
+    this.className = "drag-enter"; 
   } else {
-    this.className = "" //Note: "this" referces to the target element where the "dragenter" event is firing from.
+    this.className = ""; //Note: "this" referces to the target element where the "dragenter" event is firing from.
   }
   console.log(handleDragEnterLeave);
 }//end function
@@ -91,6 +91,7 @@ $("table").delegate(".fa-trash", "click", function() {
 $(".fa-trash").click(function(){
   $(this).parent().parent().remove();
 });
+
 var prefixAdress= "";
 
 $('.addRow').click(function(){
@@ -112,9 +113,9 @@ fetch(prefixAdress+'/steps/'+$(this).data('stepid'))
    $(self).parent().parent().before('<tr><td><select class="form-control">'+options+'</select></td><td  data-drop-target="true"></td><td  data-drop-target="true"></td><td  data-drop-target="true"></td><td  data-drop-target="true"></td></tr>');
 
    var targets = document.querySelectorAll('[data-drop-target]');
-   for(var i = 0; i < targets.length; i++) {
-  targets[i].addEventListener("dragover", handleOverDrop);
-  targets[i].addEventListener("drop", handleOverDrop);
+   for(var j = 0; j < targets.length; j++) {
+  targets[j].addEventListener("dragover", handleOverDrop);
+  targets[j].addEventListener("drop", handleOverDrop);
   // targets[i].addEventListener("dragenter", handleDragEnterLeave);
   // targets[i].addEventListener("dragleave", handleDragEnterLeave);
 }
