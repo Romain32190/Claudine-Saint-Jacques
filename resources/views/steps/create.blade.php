@@ -49,7 +49,7 @@
                 <div class="form-group">
                     <label for="parentStep">Etape parente *</label>
                     <input required type="text" class="form-control" name="parentStep" id="parentStep" placeholder="Conque">
-                </div>              
+                </div>
                 <div class="form-group">
                     <label for="gitelatitude">latitude</label>
                     <input  type="text" class="form-control" name="gitelatitude" id="gitelatitude" placeholder="0.">
@@ -71,15 +71,15 @@
                 </div>
                 <div class="form-group">
                     <label for="flatnumber">Appartement n°</label>
-                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">              
+                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">
                 </div>
                 <div class="form-group">
                     <label for="floor">Etage</label>
-                    <input class="form-control" type="text" name="floor" id="floor" >               
+                    <input class="form-control" type="text" name="floor" id="floor" >
                 </div>
                 <div class="form-group">
                     <label for="flatName">Batiment</label>
-                    <input class="form-control" type="text" name="flatName" id="flatName">  
+                    <input class="form-control" type="text" name="flatName" id="flatName">
                 </div>
                 <div class="form-group">
                     <label for="zipcode">Code postal *</label>
@@ -109,23 +109,6 @@
                 </label>
                 </div> -->
 
-<<<<<<< HEAD
-						@foreach ($step->gites as $gite)
-							<p style="line-height: 0.5em" id="gite_{{$gite->id}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;
-								<a title="editer etape" href="{{route('gites.edit',$step)}}">{{$gite->name}}</a>
-							</p>
-						@endforeach
-							<p style="line-height: 0.5em">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<i title="inserer une etape ici" style="cursor: pointer;"  class="fa fa-plus-square innerStep" aria-hidden="true"></i>
-							</p>
-				@endforeach
-				<!-- last ?? -->
-				</ul>
-			</div>
-		</div>
-	</div>
-		@extends('layouts.errors')
-=======
                 <button type="submit" class="btn btn-default">Enregistrer</button>
             </form>
         </div>
@@ -134,7 +117,7 @@
             <div style="overflow-y:scroll; height: 100%;">
                 <ul>
 
-                @foreach ($steps as $key => $step)
+                @foreach ($steps as $step)
                     <p style="line-height: 0.5em"><i title="inserer une etape ici" style="cursor: pointer;" data-id="{{$step->steporder}}" class="fa fa-plus-circle innerStep" aria-hidden="true"></i></p>
                     <p style="line-height: 0.5em" id="{{$step->id}}">&nbsp;|&nbsp;&nbsp;
                         <a title="editer etape" href="{{route('steps.edit',$step)}}">{{$step->name}}</a>
@@ -155,7 +138,6 @@
         </div>
     </div>
         {{-- @extends('layouts.errors') --}}
->>>>>>> fdfeea52126305abd9af32699fa5d2ebbce82137
 </div>
 
 
