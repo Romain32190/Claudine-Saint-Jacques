@@ -56,6 +56,7 @@
 
     <button class="btn btn-primary"type="submit">Créer</button>
   </div>
+  @extends('layouts.errors')
 </div>
   </form>
 

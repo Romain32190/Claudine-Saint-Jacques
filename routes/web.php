@@ -26,11 +26,6 @@ Route::get('/createRoadmap/{reverse?}', 'RoadmapsController@index');
 //luggages
 Route::resource('luggages', 'LuggagesController');
 
-// Route::get('/createLuggage', 'LuggagesController@create');
-//
-// Route::post('/storeLuggage', 'LuggagesController@store');
-
-
 
 Route::get('/', function(){
 
