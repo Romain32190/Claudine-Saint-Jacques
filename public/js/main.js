@@ -1,11 +1,3 @@
-$(function () {
-  $('#datetimepicker1').datepicker({
-    format: "yyyy-dd-mm",
-    orientation: "bottom-right",
-    todayHighlight: true
-  });
-});
- 
 //Function handleDragStart(), Its purpose is to store the id of the draggable element.
 function handleDragStart(e) {
   e.dataTransfer.setData("text", this.id);
@@ -92,7 +84,7 @@ $(".fa-trash").click(function(){
   $(this).parent().parent().remove();
 });
 
-var prefixAdress= "";
+var prefixAdress= "http://137.74.168.33/Claudine";
 
 $('.addRow').click(function(){
 
