@@ -43,11 +43,11 @@ class DriversController extends Controller
           $driver->name = $request->name;
           $driver->firstname = $request->firstname;
           $driver->drivingLicence = $request->drivingLicence;
-          $driver->id_vehicle = $request->vehicle;
+          $driver->id_vehicles = $request->vehicle;
           $driver->id_address = $id_address;
 
           $driver->save();
-          return view('/driver.show');
+          return redirect(url('/drivers'));
         }
 
 
@@ -71,7 +71,7 @@ class DriversController extends Controller
           $vehicles->update($request->all());
           $driver->update($request->all());
 
-          return redirect(url('drivers'));
+          return redirect(url('/drivers'));
         }
 
         public function delete($id){
