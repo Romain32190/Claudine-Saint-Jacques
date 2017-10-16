@@ -47,8 +47,8 @@
                     <input required type="text" class="form-control" name="giteName" id="giteName" placeholder="nom du gite">
                 </div>
                 <div class="form-group">
-                    <label for="parentStep">Etape parente *</label>
-                    <select class="form-control" name="parentStep" id="parentStep" >
+                    <label for="step_id">Etape parente *</label>
+                    <select class="form-control" name="step_id" id="step_id" >
                       <option default>Choisissez l'étape parente</option>
                       @foreach($steps as $step)
                       <option value="{{$step->id}}">{{$step->name}}</option>
@@ -63,7 +63,7 @@
                     <label for="gitelongitude">longitude</label>
                     <input  type="text" class="form-control" name="gitelongitude" id="gitelongitude" placeholder="0.">
                 </div>
-                    <input type="hidden" required class="form-control" name="step_id" id="step_id">
+                    <!-- <input type="hidden" required class="form-control" name="step_id" id="step_id"> -->
 
                 <p>Adresse:</p>
                 <div class="form-group">
@@ -76,15 +76,15 @@
                 </div>
                 <div class="form-group">
                     <label for="flatnumber">Appartement n°</label>
-                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">              
+                    <input class="form-control" type="text" name="flatnumber" id="flatnumber">
                 </div>
                 <div class="form-group">
                     <label for="floor">Etage</label>
-                    <input class="form-control" type="text" name="floor" id="floor" >               
+                    <input class="form-control" type="text" name="floor" id="floor" >
                 </div>
                 <div class="form-group">
                     <label for="flatName">Batiment</label>
-                    <input class="form-control" type="text" name="flatName" id="flatName">  
+                    <input class="form-control" type="text" name="flatName" id="flatName">
                 </div>
                 <div class="form-group">
                     <label for="zipcode">Code postal *</label>
@@ -175,6 +175,9 @@
 
     $('#steporder').on('keyup', function(e) {
         colorSelectedStep();
+    });
+    $('#step_id').on('change', function(e) {
+        colorSelectedGite();
     });
 </script>
 @endsection
