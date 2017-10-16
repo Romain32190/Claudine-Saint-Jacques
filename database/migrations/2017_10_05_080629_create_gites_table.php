@@ -16,8 +16,10 @@ class CreateGitesTable extends Migration
         Schema::create('gites', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->string('name');
-            $table->integer('id_address');
+            $table->integer('address_id')->nullable();
             $table->integer('step_id');
+            $table->decimal('latitude', 13, 11)->nullable();
+            $table->decimal('longitude', 13, 11)->nullable();
             // $table->integer('steporder');
             $table->timestamps();
         });

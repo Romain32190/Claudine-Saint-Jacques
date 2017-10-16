@@ -95,7 +95,7 @@ class StepController extends Controller
         $step->longitude = $request->longitude;
         // $step->steporder = $request->steporder;
         $step->save();
-        return redirect(url('steps.create'));
+        return redirect(url('steps/create'));
     }
 
     /**

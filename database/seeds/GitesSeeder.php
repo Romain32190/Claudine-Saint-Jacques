@@ -21,7 +21,7 @@ class GitesSeeder extends Seeder
         for ($i = 0; $i < $limit; $i++) {
             gites::create([
                 'name' => $faker->company,
-                'id_address' => $i+16,
+                'address_id' => $i+16,
                 'step_id' => $faker->numberBetween($min = 1, $max = 19) 
 
 

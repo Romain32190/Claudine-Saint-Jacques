@@ -20,7 +20,7 @@ Route::post('/storeAddress', 'AddressController@store');
 
 //roadmaps
 
-Route::get('/createRoadmap', 'RoadmapsController@index');
+Route::get('/createRoadmap/{reverse?}', 'RoadmapsController@index');
 
 
 //luggages

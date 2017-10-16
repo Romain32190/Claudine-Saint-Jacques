@@ -45,11 +45,11 @@
             id="street"
             value="{{$driver->address['street']}}"><br>
 
-    <label for="flatnumber">Appartement n°</label>
+    <label for="flatNumber">Appartement n°</label>
     <input  class="form-control"
             type="text"
-            name="flatnumber"
-            id="flatnumber"
+            name="flatNumber"
+            id="flatNumber"
             value="{{$driver->address['flatNumber']}}">
 
   </div>
@@ -98,7 +98,7 @@
 
     <label for="vehicle">Véhicule</label>
     <select class="form-control" name="id_vehicles" id="vehicle">
-      <option value="{{$driver->vehicle['id']}}">{{$driver->vehicles['type']}}:{{$driver->vehicles['vehicleRegistration']}} </option>
+      <option value="{{$driver->vehicles['id']}}">{{$driver->vehicles['type']}}:{{$driver->vehicles['vehicleRegistration']}} </option>
       @foreach ($vehicles as $vehicle)
       <option value="{{$vehicle->id}}">{{$vehicle->type}}:{{$vehicle->vehicleRegistration}}</option>
       @endforeach

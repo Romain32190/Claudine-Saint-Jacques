@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col col-md-9">
-			<form action="{{ route('steps.edit', $step) }}" method="POST">
+			<form action="{{ route('steps.update', $step) }}" method="POST">
 				{{ method_field('PATCH') }}
 				{{ csrf_field() }}
 				<div class="form-group">

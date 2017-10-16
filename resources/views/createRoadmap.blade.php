@@ -71,7 +71,7 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Etapes et gîtes</th>
+        <th>Etapes et gîtes <a style="margin-left: 1em" href="{{url('createRoadmap')}}"><i class="fa fa-arrow-down" aria-hidden="true"></i></a><a style="margin-left: 1em" href="{{url('createRoadmap/reverse')}}"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></th>
         <th>Bagages+</th>
         <th>Bagages-</th>
         <th>Pelerins+</th>

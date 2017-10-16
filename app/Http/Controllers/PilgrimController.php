@@ -21,10 +21,10 @@ class PilgrimController extends Controller
   }
 // route to form to create
   public function create(){
-    return view ('/pilgrims.create');
+    return view ('pilgrims.create');
   }
 // storage
-  public function store(){
+  public function store(Request $request){
 
     $this -> validate(request(), [
       'street' => 'required',
@@ -44,7 +44,7 @@ class PilgrimController extends Controller
     $pilgrim->id_address = $id_address;
 
     $pilgrim->save();
-    return view('/pilgrims');
+    return redirect(url("/pilgrims"));
   }
 
     public function edit($id){
