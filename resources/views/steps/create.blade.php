@@ -59,7 +59,7 @@
 			</div>
 		</div>
 	</div>
-		{{-- @extends('layouts.errors') --}}
+		@extends('layouts.errors')
 </div>
 
 

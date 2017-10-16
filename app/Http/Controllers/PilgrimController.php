@@ -73,6 +73,6 @@ class PilgrimController extends Controller
       $pilgrim = pilgrim::findOrFail($id);
       $pilgrim->delete();
 
-      return redirect(url('pilgrims'));
+      return redirect(route;
     }
   }
