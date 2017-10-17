@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" style="background-color: #0000FF; color:white;">
+<nav class="navbar navbar-default" style="background-color: #6495ED; color:white;">
     <div class="container">
         <div class="navbar-header">
 
