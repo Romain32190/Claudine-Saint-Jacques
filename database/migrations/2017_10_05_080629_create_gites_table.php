@@ -17,7 +17,8 @@ class CreateGitesTable extends Migration
             $table->increments('id')->index();
             $table->string('name');
             $table->integer('address_id')->nullable();
-            $table->integer('step_id');
+            $table->integer('step_id')->unsigned();
+            $table->foreign('step_id')->references('id')->on('steps');
             $table->decimal('latitude', 13, 11)->nullable();
             $table->decimal('longitude', 13, 11)->nullable();
             // $table->integer('steporder');
